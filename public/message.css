@@ -1,0 +1,87 @@
+.message {
+	display: flex;
+	width: 100%;
+	align-items: center;
+	margin: 21px 0;
+}
+.message>._avtr {
+	width: 52px;
+	min-width: 52px;
+	max-width: 52px;
+	height: 52px;
+	display: flex;
+	align-items: flex-end;
+	justify-content: center;
+}
+.message>._avtr>img {
+	width: 36px;
+	height: 36px;
+	background-color: #fefefe;
+	border-radius: 50em;
+	padding: 3px;
+	border: 1px solid #f0f0f0;
+	margin-top: -11px;
+}
+.message>._body {
+	flex-grow: 1;
+	flex-flow: 1;
+}
+.message>._body>.msg-outgoing, .message>._body>.msg-incoming {
+	display: flex;
+	flex-direction: column;
+}
+.message>._body>.msg-outgoing>._text, .message>._body>.msg-incoming>._text {
+	display: inline-block;
+}
+.message>._body>.msg-outgoing>._text>div, .message>._body>.msg-incoming>._text>div {
+	max-width: 85%;
+	display: inline-block;
+	background-color: #fff;
+	padding: 6px 12px;
+	border-radius: 17px;
+}
+.message>._body>.msg-incoming>._text>div {
+	float: right;
+	background-color: #0084ff;
+	color: #fff;
+	position: relative;
+}
+.message>._body>.msg-outgoing>._text>div>._time, .message>._body>.msg-incoming>._text>div>._time {
+	padding: 0 12px;
+	color: #a9a9a9;
+	font-size: 10px;
+	margin-top: 5px;
+	position: relative;
+	right: -12px;
+	bottom: -4px;
+}
+.message>._body>.msg-incoming>._text>div>._time {
+	color: #d3d3d3;
+}
+.message>._body>.msg-incoming>._text>div>._time {
+	float: right;
+	text-align: right;
+}
+._typing {
+	display: inline-flex!important;
+	flex-direction: row;
+	height: 27px;
+}
+._typing>div {
+	width: 7px;
+	height: 7px;
+	background-color: #999;
+	border-radius: 50em;
+	margin: 0 3px;
+	animation-duration: 0.8s!important;
+	animation-fill-mode: forwards;
+	animation-timing-function: ease-out;
+	animation-direction: alternate;
+	margin-bottom: -11px;
+}
+._typing>div:nth-child(1) {
+	animation-delay: 0.8s;
+}
+._typing>div:last-child {
+	animation-delay: 0.16s;
+}

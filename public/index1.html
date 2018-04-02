@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+   <head>
+      <meta charset="ISO-8859-1">
+      <title>Insert title here</title>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.10/handlebars.min.js"></script>
+      <link rel="stylesheet" href="styles.css" />
+      <link rel="stylesheet" href="http://assets1.chat.freshdesk.com/css/visitor.css" />
+      <style type="text/css">#lc_chat_layout {right:30px} </style>
+      <style type="text/css">  #lc_chat_layout #lc_chat_header {color:#FFFFFF;background-color:#777777}  /* #lc_chat_layout #lc_chat_container  {border-color: rgba(119,119,119,0.3)} */ </style>
+   </head>
+   <body>
+
+   <embed src="https://www.royalcyber.com/" style="width:100%; height: 1000px;">
+      <div id="lc_chat_layout" class="lc-support-widget  lc-active lc-expanded lc-chat" style="height: 393px;">
+         <div id="lc_chat_header" class=" lc-header-bg">
+            <img id="lc_agent_profile_pic" src="http://circuitcity.freshdesk.com:80/users/33002311195/profile_image" class="lc-profile-pic">
+            <span id="lc_chat_title">Agent+AI</span>
+            <!-- <span id="lc-close" class="lc-close" title="Close" style="pointer-events: auto;"> -->
+            <!-- <i>+</i> -->
+            <!-- </span> -->
+            <!-- <span id="lc_minimize" class="lc-minimize" title="Minimize"> -->
+            <!-- <i>-</i> -->
+            </span>
+         </div>
+
+         <div id="lc_chat_container" style="display: flex; flex-direction: column-reverse;">
+            <div id="lc_chat_window" class="lc-chat-window">
+               <div class="overlay-bg" style="display: none;">
+                  <div class="loader-desc">Connecting...</div>
+                  <div class="sloader"></div>
+               </div>
+               <section>
+               <div id="lc_chat_message_window">
+                  <div id="message_template">
+                     <div class="message {{message.type}}">
+                        {{#if message.typing}}
+                        <div class="typing-indicator">
+                           ...
+                        </div>
+                        {{/if}}
+                        {{message.text}}
+                     </div>
+                  </div>
+                </div>
+                     </section>
+                  <div id="message_replies" style="position: absolute; bottom: 0;">
+                  </div>
+               
+               <div id="lc_chat_notification_window"></div>
+               <footer>
+                  <form onsubmit="messenger.send(messenger.input.value, event)">
+                     <input type="text" autocomplete="off" id="lc_chat_input_container" placeholder="Type here..." tabindex="-1"/>
+                     <button id="lc_button_send" title="send" type="submit"></button>
+                  </form>
+               </footer>
+            </div>
+         </div>
+         <div class="lc-end-chat hide">
+            <p> </p>
+            <div class="lc-ec-choices">
+               <button id="lc-ec-cancel" class="lc-ec-yes lc-ec-cancel"></button>
+               <button id="lc-ec-ok" class="lc-ec-no lc-ec-ok"></button>
+            </div>
+         </div>
+      </div>
+      <script src="client.js"></script>
+      
+   </body>
+</html>

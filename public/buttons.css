@@ -1,0 +1,26 @@
+._btn {
+	outline: none;
+	border: 1px solid #0084ff;
+	background-color: transparent;
+	color: #0084ff;
+	padding: 7px 13px;
+	border-radius: 50em;
+	transition: 0.1223s;
+	font-weight: 500;
+}
+._btn>i {
+	margin: 0 3px;
+}
+._btn:hover {
+	background-color: #0084ff;
+	color: #fff;
+	border-color: #0084ff;
+}
+._btn:active {
+	box-shadow: 0 0 0 2px #FFFFFF, 0 0 0 4px #0084ff;
+}
+._btn.filled {
+	background-color: #0084ff;
+	color: #fff;
+	border-color: #0084ff;
+}

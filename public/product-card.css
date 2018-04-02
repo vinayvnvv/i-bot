@@ -1,0 +1,67 @@
+._pdct-card {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 250px;
+	box-shadow: 0 3px 1px -2px rgba(0,0,0,.2), 0 2px 2px 0 rgba(0,0,0,.14), 0 1px 5px 0 rgba(0,0,0,.12);
+	border-radius: 2px;
+	flex-direction: column;
+	background-color: #fff;
+	margin: 3px 23px;
+}
+._pdct-card>._img {
+	height: 200px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	padding: 11px 3px;
+}
+._pdct-card>._img>img {
+
+}
+._pdct-card>._detail {
+	display: flex;
+	height: 60px;
+	flex-direction: column;
+	justify-content: center;
+	width: 100%;
+	padding: 0 33px;
+}
+._pdct-card>._detail>._ttl {
+	width: 100%;
+	font-size: 17px;
+	font-weight: bold;
+	overflow: hidden;
+    text-overflow: ellipsis;
+    flex-wrap: nowrap;
+    white-space: nowrap;
+}
+._pdct-card>._detail>._price {
+	font-size: 13px;
+	color: #555;
+}
+._pdct-card>._actn {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	margin: 0;
+	flex-direction: column;
+	width: 100%;
+}
+._pdct-card>._actn>button {
+	width: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	outline: none;
+	border: none;
+	border-top: 1px solid #d9d9d9;
+	background-color: transparent;
+	color: #0084ff;
+	font-size: 16px;
+	margin-top: -1px;
+	border-radius: 0px;
+}
+._pdct-card>._actn>button:hover {
+	background-color: #ededed;
+}
