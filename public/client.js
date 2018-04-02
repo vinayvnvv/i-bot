@@ -246,7 +246,7 @@
                     //     .removeClass("fa-dot-circle-o recording")
                     //     .addClass("fa-microphone");
                     $(".record-animation").fadeOut();
-                    $("#voiceTrigger").fadeIn();
+                    $("#voiceTrigger").removeClass('is-recording');
                 });
 
                 that.recognition.onspeechend  = function() {
@@ -254,16 +254,16 @@
                     //     .removeClass("fa-dot-circle-o recording")
                     //     .addClass("fa-microphone");
                     $(".record-animation").fadeOut();
-                    $("#voiceTrigger").fadeIn();
+                    $("#voiceTrigger").removeClass('is-recording');
                 }
                 
                 that.recognition.onend = function() {
                     $(".record-animation").fadeOut();
-                    $("#voiceTrigger").fadeIn();
+                    $("#voiceTrigger").removeClass('is-recording');
                 }                
                 that.recognition.onerror = function() {
                     $(".record-animation").fadeOut();
-                    $("#voiceTrigger").fadeIn();
+                    $("#voiceTrigger").removeClass('is-recording');
                 }
 
             }
@@ -1138,12 +1138,12 @@
                         messenger.options.voice = true;
                         messenger.recognition.start();
 
-                        $("#voiceTrigger").fadeOut();
+                        $("#voiceTrigger").addClass('is-recording');
                         $(".record-animation").fadeIn();
                         // $("#recordIcon")
                         //     .removeClass("fa-microphone")
                         //     .addClass("fa-dot-circle-o recording");
-                        $(this).fadeOut();
+                        // $(this).removeClass('recording');
                     } else {
                         alert("It looks like your browser doesn't support speech recognition");
                         messenger.options.voice = false;
